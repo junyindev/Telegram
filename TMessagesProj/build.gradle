@@ -23,18 +23,17 @@ android {
     }
 
     signingConfigs {
-        debug {
-            storeFile file("config/release.keystore")
-            storePassword RELEASE_STORE_PASSWORD
-            keyAlias RELEASE_KEY_ALIAS
-            keyPassword RELEASE_KEY_PASSWORD
-        }
-
         release {
-            storeFile file("config/release.keystore")
-            storePassword RELEASE_STORE_PASSWORD
-            keyAlias RELEASE_KEY_ALIAS
-            keyPassword RELEASE_KEY_PASSWORD
+            storeFile file('default-dogfood-key.keystore')
+            storePassword '121212'
+            keyAlias 'default_key'
+            keyPassword '121212'
+        }
+        debug {
+            storeFile file('default-dogfood-key.keystore')
+            storePassword '121212'
+            keyAlias 'default_key'
+            keyPassword '121212'
         }
     }
 
